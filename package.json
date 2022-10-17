@@ -9,19 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "https://gitpkg.now.sh/likloadm/hardhat/packages/hardhat-ethers?main",
-    "@nomiclabs/hardhat-waffle": "https://gitpkg.now.sh/likloadm/hardhat/packages/hardhat-waffle?main",
+    "@nomiclabs/hardhat-ethers": "file:../hardhat/packages/hardhat-ethers",
+    "@nomiclabs/hardhat-waffle": "file:../hardhat/packages/hardhat-waffle",
     "@openzeppelin/contracts": "^4.2.0",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
-    "ethers": "^5.4.1",
-    "hardhat": "https://gitpkg.now.sh/likloadm/hardhat/packages/hardhat-core?main",
+    "ethers": "file:../ethers.js/packages/ethers",
+    "hardhat": "file:../hardhat/packages/hardhat-core",
     "ipfs-http-client": "50.1.2",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "web3modal": "git+https://github.com/likloadm/web3modal.git"
+    "web3modal": "file:../web3modal"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",

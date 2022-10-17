@@ -14,7 +14,9 @@ module.exports = {
       // Infura
       // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
       url: "https://eth2.quark.blue:23890",
-      accounts: [privateKey]
+      accounts: [privateKey],
+      gas: 2100000,
+      gasPrice: 8000000000
     },
 //    matic: {
 //      // Infura
