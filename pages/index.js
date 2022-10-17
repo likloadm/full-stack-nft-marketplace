@@ -31,7 +31,6 @@ export default function Home() {
     const items = await Promise.all(data.map(async i => {
       const tokenUri = await tokenContract.tokenURI(i.tokenId)
       const meta = await axios.get(tokenUri)
-      console.log(i.price)
       let price = ethers.utils.formatUnits((i.price*10000000000).toString(), 'ether')
       let item = {
         price,
@@ -54,7 +53,7 @@ export default function Home() {
     const signer = provider.getSigner()
     const contract = new ethers.Contract(nftmarketaddress, Market.abi, signer)
 
-    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether')
+    const price = ethers.utils.parseUnits((nft.price*10000000000).toString(), 'ether')
     const transaction = await contract.createMarketSale(nftaddress, nft.itemId, {
       gasLimit:2100000,
       value: price
